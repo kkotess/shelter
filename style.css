@@ -11,12 +11,14 @@
   --c-dark-g-xl: #4c4c4c;
   --c-dark-3xl: #292929;
   --c-back-g: #f6f6f6;
+  --c-w-g: #b2b2b2;
   --font-family: "Georgia", sans-serif;
   --second-family: "Arial", sans-serif;
   --third-family: "Inter", sans-serif;
   --font-weight: 500;
 }
 
+/* global */
 body {
   margin: 0;
 }
@@ -42,7 +44,8 @@ a:hover {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
   color: var(--c-dark-g);
 }
@@ -127,7 +130,12 @@ h3 {
   padding: 10px 20px; /* Внутренние отступы для размера кнопки */
   border: none; /* Убираем стандартную границу */
   border-radius: 100px; /* Округляем углы кнопки */
-  font-size: 16px; /* Размер текста */
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: var(--c-dark-3xl);
 }
 
 .about {
@@ -135,10 +143,11 @@ h3 {
   justify-content: center;
   gap: 120px;
   align-items: flex-start;
-  img {
-    width: 300px;
-    height: 408px;
-  }
+}
+
+.about_pets {
+  width: 300px;
+  height: 408px;
 }
 
 .about_text {
@@ -146,23 +155,26 @@ h3 {
   flex-direction: column;
   width: 430px;
   height: 380px;
-  h2 {
-    width: 370px;
-    height: 90px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-  }
-  p {
-    color: var(--c-dark-g-xl);
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 160%;
-  }
 }
+
+.about_title {
+  width: 370px;
+  height: 90px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.about_paragraph {
+  color: var(--c-dark-g-xl);
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+}
+
 #our_friends {
   height: 877px;
   background-color: var(--c-back-g);
@@ -190,22 +202,24 @@ h3 {
   height: 435px;
   justify-content: space-between;
   align-items: center;
-  .our_friends_button {
-    width: 52px;
-    height: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    background-color: transparent;
-    border: 2px solid var(--c-line);
-  }
-  ul {
-    display: flex;
-    gap: 90px;
-    list-style: none;
-    padding: 0;
-  }
+}
+
+.slider_nav_button {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 2px solid var(--c-line);
+}
+
+.our_friends_list {
+  display: flex;
+  gap: 90px;
+  list-style: none;
+  padding: 0;
 }
 
 .slider_card {
@@ -217,35 +231,40 @@ h3 {
   gap: 30px;
   background-color: var(--c-light);
   border-radius: 9px;
-  img {
-    border-radius: 9px;
-  }
-  h3 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 20px;
-    letter-spacing: 0.06em;
-    text-align: center;
-  }
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 187px;
-    height: 52px;
-    border-radius: 100px;
-    background-color: transparent;
-    border: 2px solid var(--c-line);
-    h4 {
-      font-family: var(--font-family);
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 130%;
-      letter-spacing: 0.06em;
-      color: var(--c-dark-3xl);
-    }
-  }
 }
+
+.slider_card_pet {
+  border-radius: 9px;
+}
+
+.pet_name {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.slider_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 187px;
+  height: 52px;
+  border-radius: 100px;
+  background-color: transparent;
+  border: 2px solid var(--c-line);
+}
+
+.slider_button_name {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: var(--c-dark-3xl);
+}
+
 #get_to_know {
   display: flex;
   justify-content: center;
@@ -261,4 +280,181 @@ h3 {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: var(--c-dark-3xl);
+}
+
+.help_section {
+  width: 1200px;
+  height: 431px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.help_title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.help_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 55px 120px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.help_list_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.help_card_name {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+#donation_section {
+  display: flex;
+  height: 462px;
+  background-color: var(--c-back-g);
+  justify-content: center;
+  align-items: center;
+}
+
+.donation_dog {
+  width: 505px;
+  height: 261px;
+}
+
+.donation_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  width: 380px;
+  height: 282px;
+}
+
+.donation_title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.bank_info {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: var(--c-dark-g);
+}
+
+.credit_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 349px;
+  height: 43px;
+  gap: 15px;
+  border-radius: 9px;
+  background-color: var(--c-line);
+}
+
+.credit_card_number {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: var(--c-dark-g);
+}
+
+.legal_info {
+  font-family: var(--second-family);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--c-w-g);
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  /* flex-direction: column; */
+  /* height: 350px; */
+  justify-content: space-between;
+  padding: 40px 40px 0 40px;
+  background-image: url(./assets/footer-gradient-background.png);
+}
+
+.footer_text {
+  display: flex;
+  gap: 136px;
+  padding: 16px 0 0;
+}
+
+.contacts_and_address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 302px;
+  height: 234px;
+}
+
+.list_title_footer {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: var(--color-white);
+}
+
+/* .list_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+} */
+
+.footer_list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.list_item {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: var(--c-line);
+}
+
+.footer_puppy {
+  width: 300px;
+  height: 310px;
 }
